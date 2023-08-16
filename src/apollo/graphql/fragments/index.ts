@@ -1,0 +1,1 @@
+export const fragmentDesc = 'Please export *.generated here and remove this line'

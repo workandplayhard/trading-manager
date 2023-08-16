@@ -1,0 +1,29 @@
+overwrite: true
+schema:
+  - your_end_point:
+      headers:
+        Authorization: JWT your-token
+documents: "./src/apollo/graphql/**/*.gql"
+generates:
+  src/apollo/graphql/generated/apollo-helpers.ts:
+    plugins:
+      - 'typescript-apollo-client-helpers'
+  src/apollo/graphql/generated/types.ts:
+    plugins:
+      - 'typescript'
+  src/:
+    preset: 'near-operation-file'
+    presetConfig:
+      extension: '.generated.tsx'
+      baseTypesPath: 'apollo/graphql/generated/types.ts'
+    plugins:
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      withHooks: true
+  src/apollo/graphql/generated/graphql.schema.json:
+    plugins:
+      - 'introspection'
+  src/apollo/graphql/generated/graphql.schema.graphql:
+    plugins:
+      - schema-ast

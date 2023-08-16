@@ -1,0 +1,260 @@
+.text-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.sign-up-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+
+  &:last-child {
+    margin-top: 30px;
+  }
+}
+
+.error-message {
+  font-size: rem(14);
+  line-height: 1.43;
+  color: #ed6e72;
+  right: 0;
+  position: absolute;
+}
+
+body.scroll-lock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.side-nav {
+  .nav-box {
+    ul {
+      li {
+        a {
+          &.active {
+            margin: rem(5) 0;
+            color: var(--gray-700);
+            background-color: var(--white);
+
+            &:first-child {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.modal-wrap {
+  z-index: 999;
+  .data-wrap {
+    .nav-box {
+      ul {
+        li {
+          &.active {
+            li {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.rs-picker-toggle-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  font-weight: 500;
+  font-size: rem(14);
+  line-height: 1.43;
+  color: #344054 !important;
+}
+
+.filter-data {
+  .label {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+h4 {
+  font-size: rem(12);
+}
+
+.full {
+  width: 100% !important;
+  .data-content {
+    padding: 0 !important;
+  }
+}
+
+.custom-select {
+  z-index: 2;
+
+  .option-list {
+    &:not(.open) {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+
+  &:has(> .option-list.open) {
+    z-index: 3;
+    .active-item {
+      &:before {
+        content: '\e911';
+      }
+    }
+  }
+}
+
+.lang-box {
+  .current-lang {
+    gap: rem(8);
+  }
+  .custom-select {
+    * {
+      cursor: pointer;
+    }
+    .option-list {
+      width: max-content !important;
+      left: unset;
+      right: 0;
+    }
+    .active-item {
+      border: 0;
+      p {
+        &:after {
+          content: '';
+        }
+      }
+    }
+    ul {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: rem(16) !important;
+      padding-bottom: rem(16) !important;
+      li {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-bottom: rem(8) !important;
+        padding-top: rem(8) !important;
+        transition: background-color 0.2s linear;
+        -webkit-transition: background-color 0.2s linear;
+        -moz-transition: background-color 0.2s linear;
+        -ms-transition: background-color 0.2s linear;
+        -o-transition: background-color 0.2s linear;
+        &:hover {
+          background-color: #f6f9fa;
+        }
+        &.selected {
+          background-color: #F2F4F5;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: rem(8);
+
+          span {
+            width: unset !important;
+            height: unset !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rs-picker-menu {
+  z-index: 999;
+}
+
+.red-bg {
+  background: rgba(237, 110, 114, 0.16)
+}
+
+.green-bg {
+  background: rgba(3, 166, 109, 0.16)
+}
+
+.personal .data-wrap {
+  width: 100%;
+  padding-right: 0;
+
+  .data-content .new-order {
+    width: 100%;
+  }
+}
+
+.form-fields > .group-fields:first-child {
+  z-index: 12;
+}
+.rs-picker-daterange-menu {
+  left: calc(100% - rem(656)) !important;
+}
+
+.dashboard-wrap .data-wrap {
+  &.layout-wrap {
+    display: flex;
+    flex-direction: column;
+    .data-content.layout-content {
+      flex-grow: 1;
+      .item-box {
+        display: flex;
+        flex-direction: column;
+        .item-options {
+          align-items: flex-start;
+        }
+      }
+      .data-table.loading {
+        position: relative;
+        flex-grow: 1;
+
+        table {
+          position: relative;
+          min-height: 100%;
+        }
+        &.loading-more {
+          table {
+            min-height: unset;
+          }
+        }
+      }
+      .modal-wrap {
+        .data-table.loading {
+          table {
+            min-height: 250px;
+          }
+          &.loading-more {
+            table {
+              min-height: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.loading-box {
+  &.section-loading {
+    position: absolute;
+    background: transparent;
+  }
+}

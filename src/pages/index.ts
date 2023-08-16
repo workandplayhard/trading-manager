@@ -1,0 +1,8 @@
+export { default as HomePage } from './Home'
+export { default as SignInPage } from './SignIn'
+export { default as NotFoundPage } from './NotFound'
+export { default as OverviewPage } from './Overview'
+export { default as AccountsPage } from './Accounts'
+export { default as OrdersPage } from './Orders'
+export { default as ReportsPage } from './Reports'
+export { default as ComingSoonPage } from './ComingSoon'

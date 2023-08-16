@@ -1,0 +1,1 @@
+export const mutationDesc = 'Please export *.generated here and remove this line'
